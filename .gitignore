@@ -1,17 +1,54 @@
-*.gem
-*.rbc
-.bundle
-.config
-.yardoc
-Gemfile.lock
-InstalledFiles
-_yardoc
-coverage
-doc/
-lib/bundler/man
-pkg
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
+#----------------------------------------------------------------------------
+# Ignore these files when commiting to a git repository.
+
+# bundler state
+/.bundle
+/vendor/bundle/
+
+# minimal Rails specific artifacts
+db/*.sqlite3
+/log/*.log
+/test/dummy/log/*.log
+/test/dummy/tmp/*/**
+/tmp
+
+# various artifacts
+*.sassc
+.rspec
+.sass-cache
+/config/config.yml
+/coverage.data
+/coverage/
+/db/*.javadb/
+/db/*.sqlite3-journal
+/public/cache
+/public/stylesheets/compiled
+/public/system
+/spec/tmp/*
+/cache
+/capybara*
+/capybara-*.html
+/gems
+/rerun.txt
+/spec/requests
+/spec/routing
+/spec/views
+/specifications
+
+# Mac finder artifacts
+.DS_Store
+
+# Netbeans project directory
+/nbproject/
+
+# RubyMine project directory
+/.idea/
+
+# Textmate project files
+/*.tmproj
+
+# vim artifacts
+**.swp
+/app/assets/images/*/*
+/pkg
+/test/dummy/db/*.sqlite3

@@ -60,6 +60,21 @@ namespace :twitter do
   
 end
 
+
+namespace :sbits do
+
+	desc "Convert Twitter *.scss to *.sass files"
+	task :to_sass do
+		path = "vendor/frameworks/twitter"
+		if !system "sass-convert -F scss -T sass -R --indent t #{path}"
+			abort "Could not convert *.scss to *.sass in directory: #{path}"
+		end
+
+	end
+
+end
+
+
 require 'rake/testtask'
 
 Rake::TestTask.new do |t|
