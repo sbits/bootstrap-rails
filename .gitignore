@@ -52,3 +52,4 @@ db/*.sqlite3
 /app/assets/images/*/*
 /pkg
 /test/dummy/db/*.sqlite3
+/vendor/frameworks/twitter

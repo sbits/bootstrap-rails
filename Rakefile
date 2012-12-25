@@ -68,7 +68,18 @@ namespace :sbits do
 		path = "vendor/frameworks/twitter"
 		if !system "sass-convert -F scss -T sass -R --indent t #{path}"
 			abort "Could not convert *.scss to *.sass in directory: #{path}"
+		else
+			FileList["#{path}/**/*.scss"].each do |file|
+				FileUtils.rm file
+			end
+			FileList["#{path}/**/*.sass"].each do |file|
+				if system "sed -i'' s/.scss//g #{file}"
+					puts "replaced all .scss inside: #{file.inspect}"
+				end
+			end
+
 		end
+
 
 	end
 

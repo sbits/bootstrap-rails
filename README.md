@@ -3,22 +3,16 @@ Bootstrap is a toolkit from Twitter designed to kickstart development of webapps
 It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
 
 
-
 anjlab-bootstrap-rails project integrates Bootstrap CSS (with Sass flavour) and JS toolkits for Rails 3 projects
+
+## FORK NOTICE: This fork just adds a few rake tasks to convert scss into sass and update all scss references
 
 ## Rails > 3.1
 Include Bootstrap in Gemfile;
 
 ``` ruby
-gem 'anjlab-bootstrap-rails', '>= 2.2', :require => 'bootstrap-rails'
-```
+gem 'bootstrap-rails', :git => 'git://github.com/sbits/bootstrap-rails'
 
-or you can install from latest build;
-
-``` ruby
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :git => 'git://github.com/anjlab/bootstrap-rails.git'
-```
 
 and run bundle install.
 
